@@ -36,6 +36,15 @@
         }
     });
 
+    const menuContainer = document.querySelector('.menu-header-container');
+    button.addEventListener('click', function() {
+    if (button.classList.contains('closed')) {
+        menuContainer.style.display = 'none';
+    } else {
+        menuContainer.style.display = 'block';
+    }
+    });
+
     const link = nav.querySelectorAll("a");
     
     for(var i = 0; i < link.length; i++) {
@@ -45,6 +54,11 @@
             button.classList.remove('open');
         })
     }
+
+    
+    // const navMenu = document.querySelector('#main-menu');
+
+
 
 </script>
 <!-- <script src='/main.js'></script> -->

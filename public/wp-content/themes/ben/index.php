@@ -30,7 +30,7 @@ $postid = $post->ID;
                             'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
                         ) );
                     ?>
-                   
+            
                 </nav>
             </div>
             <div class="hero2">

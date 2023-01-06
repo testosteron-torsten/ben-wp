@@ -23,13 +23,16 @@ Template Name: Home
                         <span class="line-2"></span>
                         <span class="line-3"></span>
                     </button>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#bäckerei">Bäckerei</a></li>
-                        <li><a href="#standorte">Standorte</a></li>
-                        <li><a href="#workshops">Workshops</a></li>
-                        <li><a href="#karriere">Karriere</a></li>
-                    </ul>
+                        <?php
+                        wp_nav_menu( array(
+                            'theme_location' => 'main-menu',
+                            'menu_id'        => 'main-menu',
+                            'menu' => 'Main Menu',
+                            // 'items_wrap'     => '<li id="%1$s" class="%2$s"><a href="%3$s">%3$s</li>',
+                            'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                        ) );
+                    ?>
+            
                 </nav>
             </div>
             <div class="hero">
