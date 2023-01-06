@@ -90,6 +90,11 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+.wpcf7-form-control has-spinner wpcf7-submit {
+  font-family: "Jost Regular";
+  font-size: 3rem;
+
+}
 
 /* HTML5 display-role reset for older browsers */
 article,
