@@ -116,7 +116,7 @@ Template Name: Home
                 <div class="text">
                     <div>
                         <div class="headline">
-                            <h2><?php echo get_post_custom_values('subtitel')[1];?></h2>
+                            <h2><?php echo get_post_custom_values('subtitel')[0];?></h2>
                             <div class="divider">
                                 <img src="<?php echo get_template_directory_uri() ?>/images/divider.svg" alt="Text Divider">
                             </div>
@@ -189,7 +189,7 @@ Template Name: Home
                         if ( $post ) : 
                     ?>
                         <div class="headline">
-                        <h2><?php echo get_post_custom_values('subtitel')[2];?></h2>
+                        <h2><?php echo get_post_custom_values('subtitel')[0];?></h2>
                             <div class="divider">
                                 <img src="<?php echo get_template_directory_uri() ?>/images/divider2.svg" alt="Text Divider">
                             </div>
@@ -219,7 +219,7 @@ Template Name: Home
                         if ( $post ) : 
                     ?>
                     <div class="headline">
-                        <h2><?php echo get_post_custom_values('subtitel')[3];?></h2>
+                        <h2><?php echo get_post_custom_values('subtitel')[0];?></h2>
                         <div class="divider">
                             <img src="<?php echo get_template_directory_uri() ?>/images/divider.svg" alt="Text Divider">
                         </div>
