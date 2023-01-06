@@ -1,0 +1,51 @@
+@include breakpoint($desktop) {
+    footer {
+        background-color: $primary;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 7rem;
+
+        p {
+            text-align: center;
+            font-family: $regular;
+            color: $secondary;
+            font-size: 1rem;
+            padding-top: 1rem;
+        }
+
+        a {
+            text-align: center;
+            font-family: $regular;
+            color: $secondary;
+            font-size: 1rem;
+        }
+    }
+
+}
+
+@include breakpoint(0, $mobile) {
+    footer {
+        background-color: $primary;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 7rem;
+
+        p {
+            text-align: center;
+            font-family: $regular;
+            color: $secondary;
+            font-size: 1rem;
+            padding-top: 1rem;
+        }
+
+        a {
+            text-align: center;
+            font-family: $regular;
+            color: $secondary;
+            font-size: 1rem;
+        }
+    }
+
+}

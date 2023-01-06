@@ -1,0 +1,2217 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+ *    v2.0 | 20110126
+ *       License: none (public domain)
+ *       */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* jost-regular - latin */
+@font-face {
+  font-family: "Jost Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("./fonts/jost-v14-latin-regular.woff2") format("woff2"), url("./fonts/jost-v14-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* jost-600 - latin */
+@font-face {
+  font-family: "Jost Bold";
+  font-style: normal;
+  font-weight: 600;
+  src: local(""), url("./fonts/jost-v14-latin-600.woff2") format("woff2"), url("./fonts/jost-v14-latin-600.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* jost-800 - latin */
+@font-face {
+  font-family: "Jost ExtraBold";
+  font-style: normal;
+  font-weight: 800;
+  src: local(""), url("./fonts/jost-v14-latin-800.woff2") format("woff2"), url("./fonts/jost-v14-latin-800.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.show {
+  display: block;
+  visibility: visible;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FFF7EC;
+}
+
+@media (min-width: 48.0625rem) {
+
+  .section2,
+  .section1,
+  .section3,
+  .section5,
+  .section123 {
+    margin-left: 12vw;
+    margin-right: 12vw;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+
+  .section2,
+  .section1,
+  .section5,
+  .section123 {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
+  .section2 h2,
+  .section1 h2,
+  .section5 h2,
+  .section123 h2 {
+    font-size: 1.4rem !important;
+  }
+
+  .section2 h3,
+  .section1 h3,
+  .section5 h3,
+  .section123 h3 {
+    font-size: 3rem !important;
+  }
+
+  .section3 {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
+  .section3 h3 {
+    font-size: 1.5rem !important;
+  }
+
+  .section3 p {
+    font-size: 1.2rem !important;
+  }
+
+  .section4 .text {
+    margin-left: 5vw !important;
+  }
+
+  .section4 .text h2 {
+    font-size: 1.4rem !important;
+  }
+
+  .section4 .text h3 {
+    font-size: 3rem !important;
+  }
+
+  .section4 .image {
+    margin-right: 5vw !important;
+  }
+
+  .locations .marginloc {
+    margin-left: 5vw !important;
+    margin-right: 5vw !important;
+  }
+
+  .locations .marginloc h2 {
+    font-size: 1.2rem !important;
+  }
+
+  .locations .marginloc p {
+    font-size: 1rem !important;
+  }
+
+  .hero-text {
+    left: 5vw !important;
+  }
+
+  #mainnav ul {
+    padding-right: 5vw !important;
+  }
+}
+
+@media (min-width: 48.0625rem) {
+  header #header.shrunk {
+    height: 5rem;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 5rem;
+    grid-template-areas: "logo mainnav";
+  }
+
+  header #header.shrunk .logo {
+    grid-area: logo;
+    background-color: rgba(222, 184, 135, 0.8549019608);
+    height: 5rem;
+    text-decoration: none;
+  }
+
+  header #header.shrunk .logo .logo-bg {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0);
+    margin-left: 12vw;
+    height: 5rem;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    transform: height(5rem);
+    transition: all 0.5s;
+  }
+
+  header #header.shrunk .logo .logo-bg .logo-final {
+    display: flex;
+    align-items: center;
+    max-height: 5rem;
+  }
+
+  header #header.shrunk .logo .logo-bg .logo-final img {
+    width: 4rem;
+  }
+
+  header #header.shrunk #mainnav {
+    background-color: rgba(222, 184, 135, 0.8549019608);
+  }
+
+  header #header {
+    position: fixed;
+    z-index: 2;
+    display: grid;
+    width: 100%;
+    height: 4rem;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 4rem;
+    grid-template-areas: "logo mainnav";
+  }
+
+  header #header .logo {
+    grid-area: logo;
+    background-color: #deb887;
+    will-change: background-color;
+    transition: background-color 0.5s;
+    height: 4rem;
+    text-decoration: none;
+  }
+
+  header #header .logo .logo-bg {
+    display: inline-block;
+    background-color: #8b9e5c;
+    margin-left: 12vw;
+    height: 9rem;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    will-change: background-color;
+    transition: background-color 0.5s ease-out;
+  }
+
+  header #header .logo .logo-bg .logo-final {
+    display: flex;
+    align-items: center;
+    height: 9rem;
+  }
+
+  header #header .logo .logo-bg .logo-final img {
+    width: 8rem;
+  }
+
+  header #header #mainnav {
+    grid-area: mainnav;
+    background-color: #deb887;
+    display: flex;
+    justify-content: flex-end;
+    will-change: background-color;
+    transition: background-color 0.5s;
+  }
+
+  header #header #mainnav #hamburger {
+    display: none;
+  }
+
+  header #header #mainnav ul {
+    display: flex;
+    justify-content: space-around;
+    padding-right: 9.5vw;
+  }
+
+  .menu-header-container{
+    display: flex;
+    align-items: center;
+  }
+
+  header #header #mainnav ul li {
+    padding-right: 2.5vw;
+    align-self: center;
+  }
+
+  header #header #mainnav ul li a {
+    color: #FFF7EC;
+    font-family: "Jost Regular";
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-decoration: underline 0.3vh rgba(120, 121, 122, 0);
+    transition: text-decoration-color 300ms;
+    text-underline-offset: 0.5vh;
+  }
+
+  header #header #mainnav ul li a:hover {
+    text-decoration-color: #8b9e5c;
+  }
+
+  .hero {
+    height: 65rem;
+    max-width: 100%;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9332866936) 0%, rgba(0, 0, 0, 0.6951914555) 35%, rgba(0, 0, 0, 0.2582166656) 100%), url(./images/hero.jpg);
+    background-size: cover;
+  }
+
+  .hero .hero-text {
+    position: relative;
+    top: 35rem;
+    left: 12vw;
+  }
+
+  .hero .hero-text h2 {
+    color: #FFF7EC;
+    display: inline-block;
+    font-family: "Jost ExtraBold";
+    font-size: 4rem;
+    padding-bottom: 3rem;
+    line-height: 1.2;
+  }
+
+  .hero .hero-text h2 {
+    color: #FFF7EC;
+    display: inline-block;
+    font-family: "Jost ExtraBold";
+    font-size: 4rem;
+    padding-bottom: 3rem;
+    line-height: 1.2;
+  }
+
+  .hero .hero-text a {
+    font-family: "Jost Regular";
+    text-decoration: none;
+    color: #FFF7EC;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    border-width: 0.2vh;
+    border-style: solid;
+    border-color: #8b9e5c;
+    padding: 1rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .hero .hero-text a:hover {
+    font-family: "Jost Regular";
+    text-decoration: none;
+    color: #FFF7EC;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    border-width: 0.2vh;
+    border-style: solid;
+    border-color: #8b9e5c;
+    padding: 1rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    animation-duration: 0.2s;
+    animation-name: pulse;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes pulse {
+    10% {
+      background: linear-gradient(to right, #8b9e5c 0%, rgba(255, 255, 255, 0) 10%);
+    }
+
+    20% {
+      background: linear-gradient(to right, #8b9e5c 10%, rgba(255, 255, 255, 0) 20%);
+    }
+
+    30% {
+      background: linear-gradient(to right, #8b9e5c 20%, rgba(255, 255, 255, 0) 30%);
+    }
+
+    40% {
+      background: linear-gradient(to right, #8b9e5c 30%, rgba(255, 255, 255, 0) 40%);
+    }
+
+    50% {
+      background: linear-gradient(to right, #8b9e5c 40%, rgba(255, 255, 255, 0) 50%);
+    }
+
+    60% {
+      background: linear-gradient(to right, #8b9e5c 50%, rgba(255, 255, 255, 0) 60%);
+    }
+
+    70% {
+      background: linear-gradient(to right, #8b9e5c 60%, rgba(255, 255, 255, 0) 70%);
+    }
+
+    80% {
+      background: linear-gradient(to right, #8b9e5c 70%, rgba(255, 255, 255, 0) 80%);
+    }
+
+    90% {
+      background: linear-gradient(to right, #8b9e5c 80%, rgba(255, 255, 255, 0) 90%);
+    }
+
+    100% {
+      background: linear-gradient(to right, #8b9e5c 101%, rgba(255, 255, 255, 0) 100%);
+    }
+  }
+
+  .hero2 {
+    height: 65rem;
+    max-width: 100%;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9332866936) 0%, rgba(0, 0, 0, 0.6951914555) 35%, rgba(0, 0, 0, 0.2582166656) 100%), url(./images/bakery-site-content.jpg);
+    background-size: cover;
+  }
+
+  .hero2 .hero-text {
+    position: relative;
+    top: 35rem;
+    left: 12vw;
+  }
+
+  .hero2 .hero-text h2 {
+    color: #FFF7EC;
+    display: inline-block;
+    font-family: "Jost ExtraBold";
+    font-size: 4rem;
+    padding-bottom: 3rem;
+    line-height: 1.2;
+  }
+
+  .hero2 .hero-text h1 {
+    color: #FFF7EC;
+    display: inline-block;
+    font-family: "Jost ExtraBold";
+    font-size: 4rem;
+    padding-bottom: 3rem;
+    line-height: 1.2;
+  }
+
+  .hero2 .hero-text a {
+    font-family: "Jost Regular";
+    text-decoration: none;
+    color: #FFF7EC;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    border-width: 0.2vh;
+    border-style: solid;
+    border-color: #8b9e5c;
+    padding: 1rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .hero2 .hero-text a:hover {
+    font-family: "Jost Regular";
+    text-decoration: none;
+    color: #FFF7EC;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    border-width: 0.2vh;
+    border-style: solid;
+    border-color: #8b9e5c;
+    padding: 1rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    animation-duration: 0.2s;
+    animation-name: pulse;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes pulse {
+    10% {
+      background: linear-gradient(to right, #8b9e5c 0%, rgba(255, 255, 255, 0) 10%);
+    }
+
+    20% {
+      background: linear-gradient(to right, #8b9e5c 10%, rgba(255, 255, 255, 0) 20%);
+    }
+
+    30% {
+      background: linear-gradient(to right, #8b9e5c 20%, rgba(255, 255, 255, 0) 30%);
+    }
+
+    40% {
+      background: linear-gradient(to right, #8b9e5c 30%, rgba(255, 255, 255, 0) 40%);
+    }
+
+    50% {
+      background: linear-gradient(to right, #8b9e5c 40%, rgba(255, 255, 255, 0) 50%);
+    }
+
+    60% {
+      background: linear-gradient(to right, #8b9e5c 50%, rgba(255, 255, 255, 0) 60%);
+    }
+
+    70% {
+      background: linear-gradient(to right, #8b9e5c 60%, rgba(255, 255, 255, 0) 70%);
+    }
+
+    80% {
+      background: linear-gradient(to right, #8b9e5c 70%, rgba(255, 255, 255, 0) 80%);
+    }
+
+    90% {
+      background: linear-gradient(to right, #8b9e5c 80%, rgba(255, 255, 255, 0) 90%);
+    }
+
+    100% {
+      background: linear-gradient(to right, #8b9e5c 101%, rgba(255, 255, 255, 0) 100%);
+    }
+  }
+}
+
+@media (min-width: 0rem) and (max-width: 48rem) {
+  header #header {
+    height: 4rem;
+    width: 100vw;
+    background-color: #deb887;
+    position: fixed;
+    z-index: 11;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+
+  header #header .logo {
+    position: absolute;
+    width: 20%;
+    left: 10vw;
+    z-index: 12;
+  }
+
+  header #header .logo .logo-bg {
+    background-color: #8b9e5c;
+    width: 5rem;
+    height: 5rem;
+    z-index: 13;
+  }
+
+  header #header .logo .logo-bg .logo-final {
+    width: 5rem;
+    height: 5rem;
+    z-index: 14;
+  }
+
+  header #header #mainnav #hamburger {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: #deb887;
+    z-index: 15;
+    border: none;
+    display: block;
+  }
+
+  header #header #mainnav #hamburger [class^=line-] {
+    background-color: #8b9e5c;
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    left: 0;
+    transition: transform 0.5s ease;
+  }
+
+  header #header #mainnav #hamburger:hover {
+    cursor: pointer;
+  }
+
+  header #header #mainnav #hamburger .line-1 {
+    top: 0;
+  }
+
+  header #header #mainnav #hamburger .line-2 {
+    top: 10px;
+  }
+
+  header #header #mainnav #hamburger .line-3 {
+    top: 20px;
+  }
+
+  header #header #mainnav #hamburger.open .line-1 {
+    transform: rotate(45deg);
+    transform-origin: 0 0;
+  }
+
+  header #header #mainnav #hamburger.open .line-2 {
+    display: none;
+  }
+
+  header #header #mainnav #hamburger.open .line-3 {
+    transform: rotate(-45deg) translate(11px, 5px);
+    transform-origin: 0px 20px;
+  }
+
+  header #header #mainnav #hamburger.closed+ul {
+    transform: translateX(100%);
+    transition: transform 0.5s cubic-bezier(0.01, 0.41, 0.69, 1);
+  }
+
+  header #header #mainnav #hamburger.open+ul {
+    transition: transform 0.5s cubic-bezier(0.01, 0.41, 0.69, 1);
+  }
+
+  header #header #mainnav ul {
+    position: fixed;
+    padding: 3rem 1rem 1rem 1rem;
+    z-index: 10;
+    top: 4rem;
+    right: 0;
+    background-color: #deb887;
+    height: 100vh;
+    width: 100%;
+    font-family: "Jost Regular";
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    box-shadow: inset 0em 1em 0.5em -1em black;
+  }
+
+
+  header #header #mainnav ul a {
+    color: white;
+    list-style-type: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 2;
+  }
+
+  header #header #mainnav ul a:active {
+    color: #407f59;
+  }
+
+  header #header #mainnav ul a:hover {
+    color: #8b9e5c;
+  }
+
+  .hero {
+    height: 35rem;
+    max-width: 100%;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9332866936) 0%, rgba(0, 0, 0, 0.6951914555) 35%, rgba(0, 0, 0, 0.2582166656) 100%), url(./images/hero.jpg);
+    background-size: cover;
+  }
+
+  .hero .hero-text {
+    position: relative;
+    top: 15rem;
+    left: 5vw;
+  }
+
+  .hero .hero-text h2 {
+    color: #FFF7EC;
+    display: inline-block;
+    font-family: "Jost ExtraBold";
+    font-size: 2rem;
+    padding-bottom: 2rem;
+    line-height: 1.2;
+  }
+
+  .hero .hero-text a {
+    font-family: "Jost Regular";
+    text-decoration: none;
+    color: #FFF7EC;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #8b9e5c;
+    padding: 0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .hero .hero-text a:hover {
+    animation-duration: 0.2s;
+    animation-name: pulse;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes pulse {
+    10% {
+      background: linear-gradient(to right, #8b9e5c 0%, rgba(255, 255, 255, 0) 10%);
+    }
+
+    20% {
+      background: linear-gradient(to right, #8b9e5c 10%, rgba(255, 255, 255, 0) 20%);
+    }
+
+    30% {
+      background: linear-gradient(to right, #8b9e5c 20%, rgba(255, 255, 255, 0) 30%);
+    }
+
+    40% {
+      background: linear-gradient(to right, #8b9e5c 30%, rgba(255, 255, 255, 0) 40%);
+    }
+
+    50% {
+      background: linear-gradient(to right, #8b9e5c 40%, rgba(255, 255, 255, 0) 50%);
+    }
+
+    60% {
+      background: linear-gradient(to right, #8b9e5c 50%, rgba(255, 255, 255, 0) 60%);
+    }
+
+    70% {
+      background: linear-gradient(to right, #8b9e5c 60%, rgba(255, 255, 255, 0) 70%);
+    }
+
+    80% {
+      background: linear-gradient(to right, #8b9e5c 70%, rgba(255, 255, 255, 0) 80%);
+    }
+
+    90% {
+      background: linear-gradient(to right, #8b9e5c 80%, rgba(255, 255, 255, 0) 90%);
+    }
+
+    100% {
+      background: linear-gradient(to right, #8b9e5c 101%, rgba(255, 255, 255, 0) 100%);
+    }
+  }
+
+  .hero2 {
+    height: 35rem;
+    max-width: 100%;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9332866936) 0%, rgba(0, 0, 0, 0.6951914555) 35%, rgba(0, 0, 0, 0.2582166656) 100%), url(./images/bakery-site-content.jpg);
+    background-size: cover;
+  }
+
+  .hero2 .hero-text {
+    position: relative;
+    top: 15rem;
+    left: 5vw;
+  }
+
+  .hero2 .hero-text h2 {
+    color: #FFF7EC;
+    display: inline-block;
+    font-family: "Jost ExtraBold";
+    font-size: 2rem;
+    padding-bottom: 2rem;
+    line-height: 1.2;
+  }
+
+  .hero2 .hero-text h1 {
+    color: #FFF7EC;
+    display: inline-block;
+    font-family: "Jost ExtraBold";
+    font-size: 2rem;
+    padding-bottom: 2rem;
+    line-height: 1.2;
+  }
+
+  .hero2 .hero-text a {
+    font-family: "Jost Regular";
+    text-decoration: none;
+    color: #FFF7EC;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #8b9e5c;
+    padding: 0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .hero2 .hero-text a:hover {
+    animation-duration: 0.2s;
+    animation-name: pulse;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes pulse {
+    10% {
+      background: linear-gradient(to right, #8b9e5c 0%, rgba(255, 255, 255, 0) 10%);
+    }
+
+    20% {
+      background: linear-gradient(to right, #8b9e5c 10%, rgba(255, 255, 255, 0) 20%);
+    }
+
+    30% {
+      background: linear-gradient(to right, #8b9e5c 20%, rgba(255, 255, 255, 0) 30%);
+    }
+
+    40% {
+      background: linear-gradient(to right, #8b9e5c 30%, rgba(255, 255, 255, 0) 40%);
+    }
+
+    50% {
+      background: linear-gradient(to right, #8b9e5c 40%, rgba(255, 255, 255, 0) 50%);
+    }
+
+    60% {
+      background: linear-gradient(to right, #8b9e5c 50%, rgba(255, 255, 255, 0) 60%);
+    }
+
+    70% {
+      background: linear-gradient(to right, #8b9e5c 60%, rgba(255, 255, 255, 0) 70%);
+    }
+
+    80% {
+      background: linear-gradient(to right, #8b9e5c 70%, rgba(255, 255, 255, 0) 80%);
+    }
+
+    90% {
+      background: linear-gradient(to right, #8b9e5c 80%, rgba(255, 255, 255, 0) 90%);
+    }
+
+    100% {
+      background: linear-gradient(to right, #8b9e5c 101%, rgba(255, 255, 255, 0) 100%);
+    }
+  }
+}
+
+@media (min-width: 48.0625rem) {
+  main .section1 {
+    margin-top: 6vw;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "text imagegrid";
+  }
+
+  main .section1 .text {
+    grid-area: text;
+    display: flex;
+    align-items: center;
+    background-image: url(./images/crosaint.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  main .section1 .text h2 {
+    font-family: "Jost Regular";
+    color: #8b9e5c;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+  }
+
+  main .section1 .text h3 {
+    color: #504538;
+    font-family: "Jost Bold";
+    font-size: 4.5rem;
+    line-height: 1.1;
+    max-width: 100%;
+  }
+
+  main .section1 .text p {
+    color: #504538;
+    font-family: "Jost Regular";
+    font-size: 1.3rem;
+    line-height: 1.3;
+    padding-top: 2rem;
+    max-width: 100%;
+  }
+
+  main .section1 .text .headline {
+    display: inline-block;
+  }
+
+  main .section1 .text .headline .divider img {
+    max-width: 100vw;
+  }
+
+  main .section1 .image {
+    grid-area: imagegrid;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  main .section1 .image img {
+    width: 75%;
+    align-self: center;
+  }
+}
+
+@media (min-width: 0rem) and (max-width: 48rem) {
+  main .section1 {
+    margin-top: 6vh;
+  }
+
+  main .section1 .text {
+    grid-area: text;
+    display: flex;
+    align-items: center;
+    background-image: url(./images/crosaint.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 5vw;
+  }
+
+  main .section1 .text h2 {
+    font-family: "Jost Regular";
+    color: #8b9e5c;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+  }
+
+  main .section1 .text h3 {
+    color: #504538;
+    font-family: "Jost Bold";
+    font-size: 2rem;
+    line-height: 1.1;
+    max-width: 100%;
+  }
+
+  main .section1 .text p {
+    color: #504538;
+    font-family: "Jost Regular";
+    font-size: 1.3rem;
+    line-height: 1.3;
+    padding-top: 2rem;
+    max-width: 100%;
+    margin-bottom: 3vh;
+  }
+
+  main .section1 .text .headline {
+    display: inline-block;
+  }
+
+  main .section1 .text .headline .divider img {
+    max-width: 100vw;
+  }
+
+  main .section1 .image {
+    grid-area: imagegrid;
+    display: flex;
+    justify-content: center;
+  }
+
+  main .section1 .image img {
+    width: 100vw;
+    align-self: center;
+  }
+}
+
+@media (min-width: 48.0625rem) {
+  .section2 {
+    margin-top: 6vw;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "text imagegrid";
+  }
+
+  .section2 .text {
+    grid-area: text;
+    display: flex;
+    align-items: center;
+  }
+
+  .section2 .text h2 {
+    font-family: "Jost Regular";
+    color: #8b9e5c;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+  }
+
+  .section2 .text h3 {
+    color: #504538;
+    font-family: "Jost Bold";
+    font-size: 4.5rem;
+    line-height: 1.1;
+    max-width: 100%;
+  }
+
+  .section2 .text p {
+    color: #504538;
+    font-family: "Jost Regular";
+    font-size: 1.3rem;
+    line-height: 1.3;
+    padding-top: 2rem;
+    max-width: 100%;
+  }
+
+  .section2 .text .headline {
+    display: inline-block;
+  }
+
+  .section2 .text .headline .divider img {
+    max-width: 100vw;
+  }
+
+  .section2 .text .button {
+    padding-top: 4rem;
+  }
+
+  .section2 .text .button a {
+    font-family: "Jost Regular";
+    text-decoration: none;
+    color: #FFF7EC;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    border-width: 0.2vh;
+    border-style: solid;
+    border-color: #8b9e5c;
+    padding: 1rem;
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+    background-color: #8b9e5c;
+  }
+
+  .section2 .text .button a:hover {
+    font-family: "Jost Regular";
+    text-decoration: none;
+    color: #FFF7EC;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    border-width: 0.2vh;
+    border-style: solid;
+    border-color: #FFF7EC;
+    padding: 1rem;
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+    animation-duration: 0.2s;
+    animation-name: pulse2;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes pulse2 {
+    10% {
+      background: linear-gradient(to right, #407f59 0%, #8b9e5c 10%);
+    }
+
+    20% {
+      background: linear-gradient(to right, #407f59 10%, #8b9e5c 20%);
+    }
+
+    30% {
+      background: linear-gradient(to right, #407f59 20%, #8b9e5c 30%);
+    }
+
+    40% {
+      background: linear-gradient(to right, #407f59 30%, #8b9e5c 40%);
+    }
+
+    50% {
+      background: linear-gradient(to right, #407f59 40%, #8b9e5c 50%);
+    }
+
+    60% {
+      background: linear-gradient(to right, #407f59 50%, #8b9e5c 60%);
+    }
+
+    70% {
+      background: linear-gradient(to right, #407f59 60%, #8b9e5c 70%);
+    }
+
+    80% {
+      background: linear-gradient(to right, #407f59 70%, #8b9e5c 80%);
+    }
+
+    90% {
+      background: linear-gradient(to right, #407f59 80%, #8b9e5c 90%);
+    }
+
+    100% {
+      background: linear-gradient(to right, #407f59 101%, rgba(255, 255, 255, 0) 100%);
+    }
+  }
+
+  .section2 .image {
+    grid-area: imagegrid;
+    display: flex;
+    justify-content: flex-end;
+    background-image: url(./images/bread.svg);
+    background-position: left;
+    background-repeat: no-repeat;
+  }
+
+  .section2 .image img {
+    width: 45%;
+    align-self: center;
+  }
+
+  .section3 {
+    margin-top: 6vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 3vw;
+    grid-template-areas: "service1 service2 service3";
+  }
+
+  .section3 h3 {
+    font-family: "Jost Bold";
+    color: #FFF7EC;
+    font-size: 2rem;
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .section3 p {
+    color: #FFF7EC;
+    font-family: "Jost Regular";
+    line-height: 1.3;
+    font-size: 1.7rem;
+    padding-top: 1rem;
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .section3 .service1 {
+    grid-area: service1;
+    background-size: 10rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 30rem;
+    min-width: 10rem;
+    background-color: #504538;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    will-change: background-color;
+    transition: background-color 1s;
+  }
+
+  .section3 .service1:hover {
+    background-color: #8b9e5c;
+  }
+
+  .section3 .service2 {
+    grid-area: service2;
+    background-size: 10rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 30rem;
+    min-width: 10rem;
+    background-color: #504538;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    will-change: background-color;
+    transition: background-color 1s;
+  }
+
+  .section3 .service2:hover {
+    background-color: #8b9e5c;
+  }
+
+  .section3 .service3 {
+    grid-area: service3;
+    background-size: 10rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 30rem;
+    min-width: 10rem;
+    background-color: #504538;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    will-change: background-color;
+    transition: background-color 1s;
+  }
+
+  .section3 .service3:hover {
+    background-color: #8b9e5c;
+  }
+}
+
+@media (min-width: 0rem) and (max-width: 48rem) {
+  .section2 {
+    margin-top: 6vh;
+  }
+
+  .section2 .text {
+    grid-area: text;
+    display: flex;
+    align-items: center;
+    margin: 0 5vw;
+  }
+
+  .section2 .text h2 {
+    font-family: "Jost Regular";
+    color: #8b9e5c;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  .section2 .text h3 {
+    color: #504538;
+    font-family: "Jost Bold";
+    font-size: 2rem;
+    line-height: 1.1;
+    max-width: 100%;
+  }
+
+  .section2 .text p {
+    color: #504538;
+    font-family: "Jost Regular";
+    font-size: 1.3rem;
+    line-height: 1.3;
+    padding-top: 2rem;
+    max-width: 100%;
+  }
+
+  .section2 .text .headline {
+    display: inline-block;
+  }
+
+  .section2 .text .headline .divider img {
+    max-width: 100vw;
+  }
+
+  .section2 .text .button {
+    padding-top: 2rem;
+  }
+
+  .section2 .text .button a {
+    font-family: "Jost Regular";
+    text-decoration: none;
+    color: #FFF7EC;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    border-width: 0.2vh;
+    border-style: solid;
+    border-color: #8b9e5c;
+    padding: 0.5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    background-color: #8b9e5c;
+  }
+
+  .section2 .text .button a:hover {
+    animation-duration: 0.2s;
+    animation-name: pulse2;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes pulse2 {
+    10% {
+      background: linear-gradient(to right, #407f59 0%, #8b9e5c 10%);
+    }
+
+    20% {
+      background: linear-gradient(to right, #407f59 10%, #8b9e5c 20%);
+    }
+
+    30% {
+      background: linear-gradient(to right, #407f59 20%, #8b9e5c 30%);
+    }
+
+    40% {
+      background: linear-gradient(to right, #407f59 30%, #8b9e5c 40%);
+    }
+
+    50% {
+      background: linear-gradient(to right, #407f59 40%, #8b9e5c 50%);
+    }
+
+    60% {
+      background: linear-gradient(to right, #407f59 50%, #8b9e5c 60%);
+    }
+
+    70% {
+      background: linear-gradient(to right, #407f59 60%, #8b9e5c 70%);
+    }
+
+    80% {
+      background: linear-gradient(to right, #407f59 70%, #8b9e5c 80%);
+    }
+
+    90% {
+      background: linear-gradient(to right, #407f59 80%, #8b9e5c 90%);
+    }
+
+    100% {
+      background: linear-gradient(to right, #407f59 101%, rgba(255, 255, 255, 0) 100%);
+    }
+  }
+
+  .section2 .image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .section2 .image img {
+    margin-top: 6vh;
+    width: 100vw;
+    align-self: center;
+  }
+
+  .section3 {
+    margin-top: 6vw;
+  }
+
+  .section3 h3 {
+    font-family: "Jost Bold";
+    color: #FFF7EC;
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .section3 p {
+    color: #FFF7EC;
+    font-family: "Jost Regular";
+    line-height: 1.3;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .section3 .service1 {
+    grid-area: service1;
+    background-size: 10rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 20rem;
+    min-width: 10rem;
+    background-color: #504538;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    will-change: background-color;
+    transition: background-color 1s;
+    margin: 4vw;
+  }
+
+  .section3 .service1:hover {
+    background-color: #8b9e5c;
+  }
+
+  .section3 .service2 {
+    grid-area: service2;
+    background-size: 10rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 20rem;
+    min-width: 10rem;
+    background-color: #504538;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    will-change: background-color;
+    transition: background-color 1s;
+    margin: 4vw;
+  }
+
+  .section3 .service2:hover {
+    background-color: #8b9e5c;
+  }
+
+  .section3 .service3 {
+    grid-area: service3;
+    background-size: 10rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 20rem;
+    min-width: 10rem;
+    background-color: #504538;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    will-change: background-color;
+    transition: background-color 1s;
+    margin: 4vw;
+  }
+
+  .section3 .service3:hover {
+    background-color: #8b9e5c;
+  }
+}
+
+@media (min-width: 48.0625rem) {
+  .locations {
+    background-color: #407f59;
+    margin-top: 6vw;
+  }
+
+  .locations .marginloc {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 12vw;
+    margin-right: 12vw;
+  }
+
+  .locations .location1,
+  .locations .location2,
+  .locations .location3 {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  .locations .location1 h2,
+  .locations .location2 h2,
+  .locations .location3 h2 {
+    font-family: "Jost Bold";
+    font-size: 1.8rem;
+    color: #FFF7EC;
+    padding-bottom: 1rem;
+  }
+
+  .locations .location1 p,
+  .locations .location2 p,
+  .locations .location3 p {
+    font-family: "Jost Regular";
+    font-size: 1.5rem;
+    color: #FFF7EC;
+    line-height: 1.2;
+  }
+}
+
+@media (min-width: 0rem) and (max-width: 48rem) {
+  .locations {
+    background-color: #407f59;
+    margin-top: 6vh;
+    padding-bottom: 6vh;
+  }
+
+  .locations .marginloc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .locations .location1,
+  .locations .location2,
+  .locations .location3 {
+    padding-top: 3rem;
+    width: 13rem;
+  }
+
+  .locations .location1 h2,
+  .locations .location2 h2,
+  .locations .location3 h2 {
+    font-family: "Jost Bold";
+    font-size: 1.3rem;
+    color: #FFF7EC;
+    padding-bottom: 1rem;
+  }
+
+  .locations .location1 p,
+  .locations .location2 p,
+  .locations .location3 p {
+    font-family: "Jost Regular";
+    font-size: 1.2rem;
+    color: #FFF7EC;
+    line-height: 1.2;
+  }
+}
+
+@media (min-width: 48.0625rem) {
+  .section4 {
+    margin-top: 6vw;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "text imagegrid";
+    background-color: #deb887;
+  }
+
+  .section4 .text {
+    grid-area: text;
+    display: flex;
+    align-items: center;
+    margin-left: 12vw;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  .section4 .text h2 {
+    font-family: "Jost Regular";
+    color: #FFF7EC;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+  }
+
+  .section4 .text h3 {
+    color: #504538;
+    font-family: "Jost Bold";
+    font-size: 4.5rem;
+    line-height: 1.1;
+    max-width: 100%;
+  }
+
+  .section4 .text p {
+    color: #504538;
+    font-family: "Jost Regular";
+    font-size: 1.3rem;
+    line-height: 1.3;
+    padding-top: 2rem;
+    max-width: 100%;
+  }
+
+  .section4 .text .headline {
+    display: inline-block;
+  }
+
+  .section4 .text .headline .divider img {
+    max-width: 100vw;
+  }
+
+  .section4 .text .button {
+    padding-top: 4rem;
+  }
+
+  .section4 .text .button a {
+    font-family: "Jost Regular";
+    text-decoration: none;
+    color: #504538;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    border-width: 0.2vh;
+    border-style: solid;
+    border-color: #FFF7EC;
+    padding: 1rem;
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+    background-color: #FFF7EC;
+  }
+
+  .section4 .text .button a:hover {
+    font-family: "Jost Regular";
+    text-decoration: none;
+    color: #FFF7EC;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    border-width: 0.2vh;
+    border-style: solid;
+    border-color: #deb887;
+    padding: 1rem;
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+    animation-duration: 0.2s;
+    animation-name: pulse3;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes pulse3 {
+    10% {
+      background: linear-gradient(to right, #504538 0%, #FFF7EC 10%);
+    }
+
+    20% {
+      background: linear-gradient(to right, #504538 10%, #FFF7EC 20%);
+    }
+
+    30% {
+      background: linear-gradient(to right, #504538 20%, #FFF7EC 30%);
+    }
+
+    40% {
+      background: linear-gradient(to right, #504538 30%, #FFF7EC 40%);
+    }
+
+    50% {
+      background: linear-gradient(to right, #504538 40%, #FFF7EC 50%);
+    }
+
+    60% {
+      background: linear-gradient(to right, #504538 50%, #FFF7EC 60%);
+    }
+
+    70% {
+      background: linear-gradient(to right, #504538 60%, #FFF7EC 70%);
+    }
+
+    80% {
+      background: linear-gradient(to right, #504538 70%, #FFF7EC 80%);
+    }
+
+    90% {
+      background: linear-gradient(to right, #504538 80%, #FFF7EC 90%);
+    }
+
+    100% {
+      background: linear-gradient(to right, #504538 101%, rgba(255, 255, 255, 0) 100%);
+    }
+  }
+
+  .section4 .image {
+    grid-area: imagegrid;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 12vw;
+  }
+
+  .section4 .image img {
+    width: 80%;
+    align-self: center;
+  }
+}
+
+@media (min-width: 0rem) and (max-width: 48rem) {
+  .section4 {
+    margin-top: 6vh;
+    background-color: #deb887;
+  }
+
+  .section4 .text {
+    grid-area: text;
+    display: flex;
+    align-items: center;
+    padding: 5vh 5vw;
+  }
+
+  .section4 .text h2 {
+    font-family: "Jost Regular";
+    color: #FFF7EC;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  .section4 .text h3 {
+    color: #504538;
+    font-family: "Jost Bold";
+    font-size: 2rem;
+    line-height: 1.1;
+    max-width: 100%;
+  }
+
+  .section4 .text .headline {
+    display: inline-block;
+  }
+
+  .section4 .text .headline .divider img {
+    max-width: 100vw;
+  }
+
+  .section4 .text .button {
+    padding-top: 2rem;
+  }
+
+  .section4 .text .button a {
+    font-family: "Jost Regular";
+    text-decoration: none;
+    color: #504538;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    border-width: 0.2vh;
+    border-style: solid;
+    border-color: #FFF7EC;
+    padding: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: #FFF7EC;
+  }
+
+  .section4 .text .button a:hover {
+    color: #FFF7EC;
+    border-width: 0.2vh;
+    border-style: solid;
+    border-color: #deb887;
+    animation-duration: 0.2s;
+    animation-name: pulse3;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes pulse3 {
+    10% {
+      background: linear-gradient(to right, #504538 0%, #FFF7EC 10%);
+    }
+
+    20% {
+      background: linear-gradient(to right, #504538 10%, #FFF7EC 20%);
+    }
+
+    30% {
+      background: linear-gradient(to right, #504538 20%, #FFF7EC 30%);
+    }
+
+    40% {
+      background: linear-gradient(to right, #504538 30%, #FFF7EC 40%);
+    }
+
+    50% {
+      background: linear-gradient(to right, #504538 40%, #FFF7EC 50%);
+    }
+
+    60% {
+      background: linear-gradient(to right, #504538 50%, #FFF7EC 60%);
+    }
+
+    70% {
+      background: linear-gradient(to right, #504538 60%, #FFF7EC 70%);
+    }
+
+    80% {
+      background: linear-gradient(to right, #504538 70%, #FFF7EC 80%);
+    }
+
+    90% {
+      background: linear-gradient(to right, #504538 80%, #FFF7EC 90%);
+    }
+
+    100% {
+      background: linear-gradient(to right, #504538 101%, rgba(255, 255, 255, 0) 100%);
+    }
+  }
+
+  .section4 .image {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5vh;
+  }
+
+  .section4 .image img {
+    width: 100vw;
+    align-self: center;
+  }
+}
+
+@media (min-width: 48.0625rem) {
+  .section5 {
+    margin-top: 6vw;
+    margin-bottom: 6vw;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "imagegrid text";
+  }
+
+  .section5 .text {
+    grid-area: text;
+    display: flex;
+    align-items: center;
+    margin-left: 6vw;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  .section5 .text h2 {
+    font-family: "Jost Regular";
+    color: #8b9e5c;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+  }
+
+  .section5 .text h3 {
+    color: #504538;
+    font-family: "Jost Bold";
+    font-size: 4.5rem;
+    line-height: 1.1;
+    max-width: 100%;
+  }
+
+  .section5 .text p {
+    color: #504538;
+    font-family: "Jost Regular";
+    font-size: 1.3rem;
+    line-height: 1.3;
+    padding-top: 2rem;
+    max-width: 100%;
+  }
+
+  .section5 .text .headline {
+    display: inline-block;
+  }
+
+  .section5 .text .headline .divider img {
+    max-width: 100vw;
+  }
+
+  .section5 .text .button {
+    padding-top: 4rem;
+  }
+
+  .section5 .text .button a {
+    font-family: "Jost Regular";
+    text-decoration: none;
+    color: #504538;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    border-width: 0.2vh;
+    border-style: solid;
+    border-color: #FFF7EC;
+    padding: 1rem;
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+    background-color: #FFF7EC;
+  }
+
+  .section5 .text .button a:hover {
+    font-family: "Jost Regular";
+    text-decoration: none;
+    color: #FFF7EC;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    border-width: 0.2vh;
+    border-style: solid;
+    border-color: #deb887;
+    padding: 1rem;
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+    animation-duration: 0.2s;
+    animation-name: pulse3;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes pulse3 {
+    10% {
+      background: linear-gradient(to right, #504538 0%, #FFF7EC 10%);
+    }
+
+    20% {
+      background: linear-gradient(to right, #504538 10%, #FFF7EC 20%);
+    }
+
+    30% {
+      background: linear-gradient(to right, #504538 20%, #FFF7EC 30%);
+    }
+
+    40% {
+      background: linear-gradient(to right, #504538 30%, #FFF7EC 40%);
+    }
+
+    50% {
+      background: linear-gradient(to right, #504538 40%, #FFF7EC 50%);
+    }
+
+    60% {
+      background: linear-gradient(to right, #504538 50%, #FFF7EC 60%);
+    }
+
+    70% {
+      background: linear-gradient(to right, #504538 60%, #FFF7EC 70%);
+    }
+
+    80% {
+      background: linear-gradient(to right, #504538 70%, #FFF7EC 80%);
+    }
+
+    90% {
+      background: linear-gradient(to right, #504538 80%, #FFF7EC 90%);
+    }
+
+    100% {
+      background: linear-gradient(to right, #504538 101%, rgba(255, 255, 255, 0) 100%);
+    }
+  }
+
+  .section5 .image {
+    grid-area: imagegrid;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .section5 .image img {
+    width: 100%;
+    align-self: center;
+  }
+}
+
+@media (min-width: 0rem) and (max-width: 48rem) {
+  .section5 {
+    margin-top: 6vh;
+    margin-bottom: 6vh;
+  }
+
+  .section5 .text {
+    display: flex;
+    align-items: center;
+    margin: 5vh 5vw;
+  }
+
+  .section5 .text h2 {
+    font-family: "Jost Regular";
+    color: #8b9e5c;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  .section5 .text h3 {
+    color: #504538;
+    font-family: "Jost Bold";
+    font-size: 2rem;
+    line-height: 1.1;
+    max-width: 100%;
+  }
+
+  .section5 .text p {
+    color: #504538;
+    font-family: "Jost Regular";
+    font-size: 1.3rem;
+    line-height: 1.3;
+    padding-top: 2rem;
+    max-width: 100%;
+  }
+
+  .section5 .text .headline {
+    display: inline-block;
+  }
+
+  .section5 .text .headline .divider img {
+    max-width: 100vw;
+  }
+
+  .section5 .text .button {
+    padding-top: 4rem;
+  }
+
+  .section5 .text .button a {
+    font-family: "Jost Regular";
+    text-decoration: none;
+    color: #504538;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    border-width: 0.2vh;
+    border-style: solid;
+    border-color: #FFF7EC;
+    padding: 1rem;
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+    background-color: #FFF7EC;
+  }
+
+  .section5 .text .button a:hover {
+    font-family: "Jost Regular";
+    text-decoration: none;
+    color: #FFF7EC;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    border-width: 0.2vh;
+    border-style: solid;
+    border-color: #deb887;
+    padding: 1rem;
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+    animation-duration: 0.2s;
+    animation-name: pulse3;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes pulse3 {
+    10% {
+      background: linear-gradient(to right, #504538 0%, #FFF7EC 10%);
+    }
+
+    20% {
+      background: linear-gradient(to right, #504538 10%, #FFF7EC 20%);
+    }
+
+    30% {
+      background: linear-gradient(to right, #504538 20%, #FFF7EC 30%);
+    }
+
+    40% {
+      background: linear-gradient(to right, #504538 30%, #FFF7EC 40%);
+    }
+
+    50% {
+      background: linear-gradient(to right, #504538 40%, #FFF7EC 50%);
+    }
+
+    60% {
+      background: linear-gradient(to right, #504538 50%, #FFF7EC 60%);
+    }
+
+    70% {
+      background: linear-gradient(to right, #504538 60%, #FFF7EC 70%);
+    }
+
+    80% {
+      background: linear-gradient(to right, #504538 70%, #FFF7EC 80%);
+    }
+
+    90% {
+      background: linear-gradient(to right, #504538 80%, #FFF7EC 90%);
+    }
+
+    100% {
+      background: linear-gradient(to right, #504538 101%, rgba(255, 255, 255, 0) 100%);
+    }
+  }
+
+  .section5 .image {
+    grid-area: imagegrid;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .section5 .image img {
+    width: 100%;
+    align-self: center;
+  }
+}
+
+@media (min-width: 48.0625rem) {
+  footer {
+    background-color: #deb887;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 7rem;
+  }
+
+  footer p {
+    text-align: center;
+    font-family: "Jost Regular";
+    color: #504538;
+    font-size: 1rem;
+    padding-top: 1rem;
+  }
+
+  footer a {
+    text-align: center;
+    font-family: "Jost Regular";
+    color: #504538;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 0rem) and (max-width: 48rem) {
+  footer {
+    background-color: #deb887;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 7rem;
+  }
+
+  footer p {
+    text-align: center;
+    font-family: "Jost Regular";
+    color: #504538;
+    font-size: 1rem;
+    padding-top: 1rem;
+  }
+
+  footer a {
+    text-align: center;
+    font-family: "Jost Regular";
+    color: #504538;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 48.0625rem) {
+  main .section123 {
+    margin-top: 6vw;
+    display: flex;
+    justify-content: center;
+  }
+
+  main .section123 .text h2 {
+    color: #504538;
+    font-family: "Jost Bold";
+    font-size: 4.5rem;
+    line-height: 1.1;
+    max-width: 100%;
+  }
+
+  main .section123 .text p {
+    color: #504538;
+    font-family: "Jost Regular";
+    font-size: 1.3rem;
+    line-height: 1.3;
+    padding-top: 2rem;
+    max-width: 100%;
+  }
+
+  main .section123 .text .headline {
+    display: inline-block;
+  }
+
+  main .section123 .text .headline .divider img {
+    max-width: 100vw;
+  }
+
+  main .section123 .image {
+    display: flex;
+    justify-content: center;
+    margin-top: 6vh;
+    margin-bottom: 6vh;
+  }
+
+  main .section123 .image img {
+    width: 35%;
+  }
+}
+
+@media (min-width: 0rem) and (max-width: 48rem) {
+  main .section123 {
+    margin-top: 6vw;
+    display: flex;
+    justify-content: center;
+  }
+
+  main .section123 .text {
+    margin: 6vw;
+  }
+
+  main .section123 .text h2 {
+    color: #504538;
+    font-family: "Jost Bold";
+    font-size: 2rem;
+    line-height: 1.1;
+    max-width: 100%;
+  }
+
+  main .section123 .text p {
+    color: #504538;
+    font-family: "Jost Regular";
+    font-size: 1.3rem;
+    line-height: 1.3;
+    padding-top: 2rem;
+    max-width: 100%;
+    margin-bottom: 3vh;
+  }
+
+  main .section123 .text .headline {
+    display: inline-block;
+  }
+
+  main .section123 .text .headline .divider img {
+    max-width: 100vw;
+  }
+
+  main .section123 .image {
+    display: flex;
+    justify-content: center;
+  }
+
+  main .section123 .image img {
+    width: 100vw;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

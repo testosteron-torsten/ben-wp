@@ -1,0 +1,277 @@
+@include breakpoint($desktop) {
+
+    .section4 {
+
+        margin-top: 6vw;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+            "text imagegrid";
+        background-color: $primary;
+
+        .text {
+            grid-area: text;
+            display: flex;
+            align-items: center;
+            margin-left: 12vw;
+            padding-top: 7rem;
+            padding-bottom: 7rem;
+
+            h2 {
+                font-family: 'Jost Regular';
+                color: $cream;
+                font-size: 1.8rem;
+                text-transform: uppercase;
+            }
+
+            h3 {
+                color: $secondary;
+                font-family: $bold;
+                font-size: 4.5rem;
+                line-height: 1.1;
+                max-width: 100%;
+            }
+
+            p {
+                color: $secondary;
+                font-family: $regular;
+                font-size: 1.3rem;
+                line-height: 1.3;
+                padding-top: 2rem;
+                max-width: 100%;
+            }
+
+            .headline {
+                display: inline-block;
+
+                .divider {
+
+                    img {
+                        max-width: 100vw;
+                    }
+                }
+            }
+
+            .button {
+                padding-top: 4rem;
+
+                a {
+                    font-family: $regular;
+                    text-decoration: none;
+                    color: $secondary;
+                    text-transform: uppercase;
+                    font-size: 1.3rem;
+                    border-width: 0.2vh;
+                    border-style: solid;
+                    border-color: $cream;
+                    padding: 1rem;
+                    padding-left: 4.5rem;
+                    padding-right: 4.5rem;
+                    background-color: $cream;
+                }
+
+                a:hover {
+                    font-family: $regular;
+                    text-decoration: none;
+                    color: $cream;
+                    text-transform: uppercase;
+                    font-size: 1.3rem;
+                    border-width: 0.2vh;
+                    border-style: solid;
+                    border-color: $primary;
+                    padding: 1rem;
+                    padding-left: 4.5rem;
+                    padding-right: 4.5rem;
+                    animation-duration: .2s;
+                    animation-name: pulse3;
+                    animation-fill-mode: forwards;
+
+                }
+            }
+        }
+
+
+        @keyframes pulse3 {
+            10% {
+                background: linear-gradient(to right, $secondary 0%, $cream 10%);
+            }
+
+            20% {
+                background: linear-gradient(to right, $secondary 10%, $cream 20%);
+            }
+
+            30% {
+                background: linear-gradient(to right, $secondary 20%, $cream 30%);
+            }
+
+            40% {
+                background: linear-gradient(to right, $secondary 30%, $cream 40%);
+            }
+
+            50% {
+                background: linear-gradient(to right, $secondary 40%, $cream 50%);
+            }
+
+            60% {
+                background: linear-gradient(to right, $secondary 50%, $cream 60%);
+            }
+
+            70% {
+                background: linear-gradient(to right, $secondary 60%, $cream 70%);
+            }
+
+            80% {
+                background: linear-gradient(to right, $secondary 70%, $cream 80%);
+            }
+
+            90% {
+                background: linear-gradient(to right, $secondary 80%, $cream 90%);
+            }
+
+            100% {
+                background: linear-gradient(to right, $secondary 101%, rgba(255, 255, 255, 0) 100%);
+            }
+
+        }
+
+        .image {
+            grid-area: imagegrid;
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 12vw;
+
+            img {
+                width: 80%;
+                align-self: center;
+            }
+        }
+    }
+}
+
+@include breakpoint(0, $mobile) {
+
+    .section4 {
+
+        margin-top: 6vh;
+        background-color: $primary;
+
+        .text {
+            grid-area: text;
+            display: flex;
+            align-items: center;
+            padding: 5vh 5vw;
+
+            h2 {
+                font-family: 'Jost Regular';
+                color: $cream;
+                font-size: 1.5rem;
+                text-transform: uppercase;
+            }
+
+            h3 {
+                color: $secondary;
+                font-family: $bold;
+                font-size: 2rem;
+                line-height: 1.1;
+                max-width: 100%;
+            }
+
+
+            .headline {
+                display: inline-block;
+
+                .divider {
+
+                    img {
+                        max-width: 100vw;
+                    }
+                }
+            }
+
+            .button {
+                padding-top: 2rem;
+
+                a {
+                    font-family: $regular;
+                    text-decoration: none;
+                    color: $secondary;
+                    text-transform: uppercase;
+                    font-size: 1.2rem;
+                    border-width: 0.2vh;
+                    border-style: solid;
+                    border-color: $cream;
+                    padding: .5rem;
+                    padding-left: 2rem;
+                    padding-right: 2rem;
+                    background-color: $cream;
+                }
+
+                a:hover {
+                    color: $cream;
+                    border-width: 0.2vh;
+                    border-style: solid;
+                    border-color: $primary;
+                    animation-duration: .2s;
+                    animation-name: pulse3;
+                    animation-fill-mode: forwards;
+
+                }
+            }
+        }
+
+
+        @keyframes pulse3 {
+            10% {
+                background: linear-gradient(to right, $secondary 0%, $cream 10%);
+            }
+
+            20% {
+                background: linear-gradient(to right, $secondary 10%, $cream 20%);
+            }
+
+            30% {
+                background: linear-gradient(to right, $secondary 20%, $cream 30%);
+            }
+
+            40% {
+                background: linear-gradient(to right, $secondary 30%, $cream 40%);
+            }
+
+            50% {
+                background: linear-gradient(to right, $secondary 40%, $cream 50%);
+            }
+
+            60% {
+                background: linear-gradient(to right, $secondary 50%, $cream 60%);
+            }
+
+            70% {
+                background: linear-gradient(to right, $secondary 60%, $cream 70%);
+            }
+
+            80% {
+                background: linear-gradient(to right, $secondary 70%, $cream 80%);
+            }
+
+            90% {
+                background: linear-gradient(to right, $secondary 80%, $cream 90%);
+            }
+
+            100% {
+                background: linear-gradient(to right, $secondary 101%, rgba(255, 255, 255, 0) 100%);
+            }
+
+        }
+
+        .image {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 5vh;
+
+            img {
+                width: 100vw;
+                align-self: center;
+            }
+        }
+    }
+}

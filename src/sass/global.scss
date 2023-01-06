@@ -1,0 +1,102 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $cream;
+}
+
+@include breakpoint($desktop) {
+
+  .section2,
+  .section1,
+  .section3,
+  .section5,
+  .section123 {
+    margin-left: 12vw;
+    margin-right: 12vw;
+  }
+}
+
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+
+  .section2,
+  .section1,
+  .section5,
+  .section123 {
+    margin-left: 5vw;
+    margin-right: 5vw;
+
+    h2 {
+      font-size: 1.4rem !important;
+    }
+
+    h3 {
+      font-size: 3rem !important;
+    }
+  }
+
+  .section3 {
+    margin-left: 5vw;
+    margin-right: 5vw;
+
+    h3 {
+      font-size: 1.5rem !important;
+    }
+
+    p {
+      font-size: 1.2rem !important;
+    }
+  }
+
+  .section4 {
+
+    .text {
+      margin-left: 5vw !important;
+
+      h2 {
+        font-size: 1.4rem !important;
+      }
+
+      h3 {
+        font-size: 3rem !important;
+      }
+    }
+
+    .image {
+      margin-right: 5vw !important;
+    }
+  }
+
+  .locations {
+    .marginloc {
+      margin-left: 5vw !important;
+      margin-right: 5vw !important;
+
+      h2 {
+        font-size: 1.2rem !important;
+      }
+
+      p {
+        font-size: 1rem !important;
+      }
+    }
+  }
+
+  .hero-text {
+    left: 5vw !important;
+  }
+
+  #mainnav {
+    ul {
+      padding-right: 5vw !important;
+    }
+  }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ben Müller | Bäckerei</title>
+    <link rel='stylesheet' href='./style.css'>
+</head>
+
+<body>
+    <header>
+        <section class="home" id="home">
+            <div id="header">
+                <a href="/" class="logo">
+                    <div class="logo-bg">
+                        <div class="logo-final">
+                            <img src="./images/logo.svg" alt="Logo">
+                        </div>
+                    </div>
+                </a>
+                <nav id="mainnav">
+                    <button id="hamburger" class="closed">
+                        <span class="line-1"></span>
+                        <span class="line-2"></span>
+                        <span class="line-3"></span>
+                    </button>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#bäckerei">Bäckerei</a></li>
+                        <li><a href="#standorte">Standorte</a></li>
+                        <li><a href="#workshops">Workshops</a></li>
+                        <li><a href="#karriere">Karriere</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="hero2">
+                <span class="hero-text">
+                    <h1>Die knusrigsten<br> Semmerl<br>in Salzburg.</h1><br>
+                </span>
+            </div>
+        </section>
+    </header>
+    <main>
+
+        <section class="content" id="content">
+            <div class="section123">
+                <div>
+                    <div class="text">
+                        <div>
+                            <h2>Uns gibt es drei mal in Salzburg.</h2>
+                            <p>Ben Müller, mittlerweile drei mal in Salzburg. Unsere Kunden
+                                verzaubern wird täglich von 06:00 bis 18:00 mit den köstlichsten
+                                Backwaren, die man sich nur vorstellen kann. Von Mehlspeisen bis
+                                zu klassischem Jausengebäck ist für jeden was dabei. Achja, bei uns
+                                gibt es übrigens die saftigsten Semmerl Salzburgs! Seit vielen Jahren sind wir bekannt
+                                für
+                                unsere leckeren Backwaren, die wir täglich frisch zubereiten und mit höchster Qualität
+                                garantieren.
+
+                                Unser Angebot umfasst eine breite Auswahl an Broten, Brötchen, Kuchen und süßen
+                                Leckereien.
+                                Ob
+                                Sie sich für ein klassisches Roggenbrot oder ein saftiges Kürbiskernbrot entscheiden,
+                                bei
+                                uns
+                                finden Sie garantiert das Richtige für jeden Geschmack. Unsere süßen Kuchen und Torten
+                                sind
+                                ebenfalls ein absolutes Highlight und eignen sich perfekt als Nachtisch für Ihr nächstes
+                                Dinner
+                                oder als Geschenk für Freunde und Familie.
+
+                                Schaut´s vorbei
+                                und überzeugt euch selbst von Ben Müller! </p>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="./images/bäckerei.jpg" alt="Bäckerei Theke mit vielen Nachspeisen">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <footer>
+        <div>
+            <a href="#">Impressum & Datenschutz</a>
+            <p>2004 – 2023<br>© Ben Müller</p>
+        </div>
+
+    </footer>
+</body>
+<script>
+    window.addEventListener("scroll", function () {
+        let offset = window.pageYOffset;
+        let h = document.getElementById("header");
+        if (offset > 150) {
+            h.classList.add("shrunk");
+        } else if (offset < 150) {
+            h.classList.remove("shrunk");
+        }
+    });
+</script>
+<script src='./main.js'></script>
+
+</html>

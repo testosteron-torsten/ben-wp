@@ -1,0 +1,672 @@
+@include breakpoint($desktop) {
+    header {
+
+        #header.shrunk {
+            height: 5rem;
+            grid-template-columns: 30% 70%;
+            grid-template-rows: 5rem;
+            grid-template-areas:
+                "logo mainnav";
+
+            .logo {
+                grid-area: logo;
+                background-color: #deb887da;
+                height: 5rem;
+                text-decoration: none;
+
+                .logo-bg {
+                    display: inline-block;
+                    background-color: rgba(255, 255, 255, 0);
+                    margin-left: 12vw;
+                    height: 5rem;
+                    padding-left: 1vw;
+                    padding-right: 1vw;
+                    transform: height(5rem);
+                    transition: all .5s;
+
+                    .logo-final {
+                        display: flex;
+                        align-items: center;
+                        max-height: 5rem;
+
+                        img {
+                            width: 4rem;
+                        }
+                    }
+                }
+            }
+
+            #mainnav {
+                background-color: #deb887da;
+            }
+        }
+
+        #header {
+            position: fixed;
+            z-index: 2;
+            display: grid;
+            width: 100%;
+            height: 4rem;
+            grid-template-columns: 40% 60%;
+            grid-template-rows: 4rem;
+            grid-template-areas:
+                "logo mainnav";
+
+
+            .logo {
+                grid-area: logo;
+                background-color: $primary;
+                will-change: background-color;
+                transition: background-color .5s;
+                height: 4rem;
+                text-decoration: none;
+
+                .logo-bg {
+                    display: inline-block;
+                    background-color: $accent2;
+                    margin-left: 12vw;
+                    height: 9rem;
+                    padding-left: 1vw;
+                    padding-right: 1vw;
+                    will-change: background-color;
+                    transition: background-color .5s ease-out;
+
+                    .logo-final {
+                        display: flex;
+                        align-items: center;
+                        height: 9rem;
+
+                        img {
+                            width: 8rem;
+                        }
+                    }
+
+
+                }
+            }
+
+            #mainnav {
+                grid-area: mainnav;
+                background-color: $primary;
+                display: flex;
+                justify-content: flex-end;
+                will-change: background-color;
+                transition: background-color .5s;
+
+                #hamburger {
+                    display: none;
+                }
+
+                ul {
+                    display: flex;
+                    justify-content: space-around;
+                    padding-right: 9.5vw;
+
+                    li {
+                        padding-right: 2.5vw;
+                        align-self: center;
+
+                        a {
+                            color: $cream;
+                            font-family: $regular;
+                            text-decoration: none;
+                            font-size: 1rem;
+                            text-transform: uppercase;
+                            text-decoration: underline .3vh rgba(120, 121, 122, 0);
+
+                            transition: text-decoration-color 300ms;
+                            text-underline-offset: .5vh;
+                        }
+
+                        a:hover {
+                            text-decoration-color: $accent2;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .hero {
+        height: 65rem;
+        max-width: 100%;
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9332866935836834) 0%, rgba(0, 0, 0, 0.6951914554884453) 35%, rgba(0, 0, 0, 0.258216665572479) 100%), url(./images/hero.jpg);
+        background-size: cover;
+
+
+
+        .hero-text {
+            position: relative;
+            top: 35rem;
+            left: 12vw;
+
+
+            h2 {
+                color: $cream;
+                display: inline-block;
+                font-family: $extrabold;
+                font-size: 4rem;
+                padding-bottom: 3rem;
+                line-height: 1.2;
+            }
+
+            h1 {
+                color: $cream;
+                display: inline-block;
+                font-family: $extrabold;
+                font-size: 4rem;
+                padding-bottom: 3rem;
+                line-height: 1.2;
+            }
+
+            a {
+                font-family: $regular;
+                text-decoration: none;
+                color: $cream;
+                text-transform: uppercase;
+                font-size: 1.5rem;
+                border-width: 0.2vh;
+                border-style: solid;
+                border-color: $accent2;
+                padding: 1rem;
+                padding-left: 2.5rem;
+                padding-right: 2.5rem;
+            }
+
+            a:hover {
+                font-family: $regular;
+                text-decoration: none;
+                color: $cream;
+                text-transform: uppercase;
+                font-size: 1.5rem;
+                border-width: 0.2vh;
+                border-style: solid;
+                border-color: $accent2;
+                padding: 1rem;
+                padding-left: 2.5rem;
+                padding-right: 2.5rem;
+                animation-duration: .2s;
+                animation-name: pulse;
+                animation-fill-mode: forwards;
+
+            }
+
+            @keyframes pulse {
+                10% {
+                    background: linear-gradient(to right, $accent2 0%, rgba(255, 255, 255, 0) 10%);
+                }
+
+                20% {
+                    background: linear-gradient(to right, $accent2 10%, rgba(255, 255, 255, 0) 20%);
+                }
+
+                30% {
+                    background: linear-gradient(to right, $accent2 20%, rgba(255, 255, 255, 0) 30%);
+                }
+
+                40% {
+                    background: linear-gradient(to right, $accent2 30%, rgba(255, 255, 255, 0) 40%);
+                }
+
+                50% {
+                    background: linear-gradient(to right, $accent2 40%, rgba(255, 255, 255, 0) 50%);
+                }
+
+                60% {
+                    background: linear-gradient(to right, $accent2 50%, rgba(255, 255, 255, 0) 60%);
+                }
+
+                70% {
+                    background: linear-gradient(to right, $accent2 60%, rgba(255, 255, 255, 0) 70%);
+                }
+
+                80% {
+                    background: linear-gradient(to right, $accent2 70%, rgba(255, 255, 255, 0) 80%);
+                }
+
+                90% {
+                    background: linear-gradient(to right, $accent2 80%, rgba(255, 255, 255, 0) 90%);
+                }
+
+                100% {
+                    background: linear-gradient(to right, $accent2 101%, rgba(255, 255, 255, 0) 100%);
+                }
+
+            }
+        }
+    }
+
+    .hero2 {
+        height: 65rem;
+        max-width: 100%;
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9332866935836834) 0%, rgba(0, 0, 0, 0.6951914554884453) 35%, rgba(0, 0, 0, 0.258216665572479) 100%), url(./images/bakery-site-content.jpg);
+        background-size: cover;
+
+
+
+        .hero-text {
+            position: relative;
+            top: 35rem;
+            left: 12vw;
+
+
+            h2 {
+                color: $cream;
+                display: inline-block;
+                font-family: $extrabold;
+                font-size: 4rem;
+                padding-bottom: 3rem;
+                line-height: 1.2;
+            }
+
+            h1 {
+                color: $cream;
+                display: inline-block;
+                font-family: $extrabold;
+                font-size: 4rem;
+                padding-bottom: 3rem;
+                line-height: 1.2;
+            }
+
+            a {
+                font-family: $regular;
+                text-decoration: none;
+                color: $cream;
+                text-transform: uppercase;
+                font-size: 1.5rem;
+                border-width: 0.2vh;
+                border-style: solid;
+                border-color: $accent2;
+                padding: 1rem;
+                padding-left: 2.5rem;
+                padding-right: 2.5rem;
+            }
+
+            a:hover {
+                font-family: $regular;
+                text-decoration: none;
+                color: $cream;
+                text-transform: uppercase;
+                font-size: 1.5rem;
+                border-width: 0.2vh;
+                border-style: solid;
+                border-color: $accent2;
+                padding: 1rem;
+                padding-left: 2.5rem;
+                padding-right: 2.5rem;
+                animation-duration: .2s;
+                animation-name: pulse;
+                animation-fill-mode: forwards;
+
+            }
+
+            @keyframes pulse {
+                10% {
+                    background: linear-gradient(to right, $accent2 0%, rgba(255, 255, 255, 0) 10%);
+                }
+
+                20% {
+                    background: linear-gradient(to right, $accent2 10%, rgba(255, 255, 255, 0) 20%);
+                }
+
+                30% {
+                    background: linear-gradient(to right, $accent2 20%, rgba(255, 255, 255, 0) 30%);
+                }
+
+                40% {
+                    background: linear-gradient(to right, $accent2 30%, rgba(255, 255, 255, 0) 40%);
+                }
+
+                50% {
+                    background: linear-gradient(to right, $accent2 40%, rgba(255, 255, 255, 0) 50%);
+                }
+
+                60% {
+                    background: linear-gradient(to right, $accent2 50%, rgba(255, 255, 255, 0) 60%);
+                }
+
+                70% {
+                    background: linear-gradient(to right, $accent2 60%, rgba(255, 255, 255, 0) 70%);
+                }
+
+                80% {
+                    background: linear-gradient(to right, $accent2 70%, rgba(255, 255, 255, 0) 80%);
+                }
+
+                90% {
+                    background: linear-gradient(to right, $accent2 80%, rgba(255, 255, 255, 0) 90%);
+                }
+
+                100% {
+                    background: linear-gradient(to right, $accent2 101%, rgba(255, 255, 255, 0) 100%);
+                }
+
+            }
+        }
+    }
+
+
+}
+
+@include breakpoint(0, $mobile) {
+    header {
+        #header {
+            height: 4rem;
+            width: 100vw;
+            background-color: $primary;
+            position: fixed;
+            z-index: 11;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+            // &:before {
+            //     content: "";
+            //     position: absolute;
+            //     top: 0;
+            //     bottom: 0;
+            //     left: 0;
+            //     right: 0;
+            //     z-index: +1;
+            //     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            // }
+
+            .logo {
+                position: absolute;
+                width: 20%;
+                left: 10vw;
+                z-index: 12;
+
+                .logo-bg {
+                    background-color: $accent2;
+                    width: 5rem;
+                    height: 5rem;
+                    z-index: 13;
+
+                    .logo-final {
+                        width: 5rem;
+                        height: 5rem;
+                        z-index: 14;
+                    }
+                }
+            }
+
+            #mainnav {
+                #hamburger {
+                    position: fixed;
+                    right: 20px;
+                    top: 20px;
+                    width: 30px;
+                    height: 30px;
+                    background-color: $primary;
+                    z-index: 15;
+                    border: none;
+                    display: block;
+
+                    [class^=line-] {
+                        background-color: $accent2;
+                        width: 100%;
+                        height: 5px;
+                        position: absolute;
+                        left: 0;
+                        transition: transform .5s ease;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                    .line-1 {
+                        top: 0;
+                    }
+
+                    .line-2 {
+                        top: 10px;
+                    }
+
+                    .line-3 {
+                        top: 20px;
+                    }
+
+                    &.open {
+                        .line-1 {
+                            transform: rotate(45deg);
+                            transform-origin: 0 0;
+
+                        }
+
+                        .line-2 {
+                            display: none;
+                        }
+
+                        .line-3 {
+                            transform: rotate(-45deg) translate(11px, 5px);
+                            transform-origin: 0px 20px;
+                        }
+                    }
+
+                    &.closed+ul {
+                        transform: translateX(100%);
+                        transition: transform 0.5s cubic-bezier(.01, .41, .69, 1);
+                    }
+
+                    &.open+ul {
+                        transition: transform 0.5s cubic-bezier(.01, .41, .69, 1);
+                    }
+                }
+
+                ul {
+                    position: fixed;
+                    padding: 3rem 1rem 1rem 1rem;
+                    z-index: 10;
+                    top: 4rem;
+                    right: 0;
+                    background-color: $primary;
+                    height: 100vh;
+                    width: 100%;
+                    font-family: $regular;
+                    font-size: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                    box-shadow: inset 0em 1em 0.5em -1em black;
+
+                    a {
+                        color: white;
+                        list-style-type: none;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        line-height: 2;
+
+                        &:active {
+                            color: $accent;
+                        }
+
+                        &:hover {
+                            color: $accent2;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .hero {
+        height: 35rem;
+        max-width: 100%;
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9332866935836834) 0%, rgba(0, 0, 0, 0.6951914554884453) 35%, rgba(0, 0, 0, 0.258216665572479) 100%), url(./images/hero.jpg);
+        background-size: cover;
+
+        .hero-text {
+            position: relative;
+            top: 15rem;
+            left: 5vw;
+
+            h2 {
+                color: $cream;
+                display: inline-block;
+                font-family: $extrabold;
+                font-size: 2rem;
+                padding-bottom: 2rem;
+                line-height: 1.2;
+            }
+
+            a {
+                font-family: $regular;
+                text-decoration: none;
+                color: $cream;
+                text-transform: uppercase;
+                font-size: 1.2rem;
+                border-width: 2px;
+                border-style: solid;
+                border-color: $accent2;
+                padding: .5rem;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+
+            a:hover {
+                animation-duration: .2s;
+                animation-name: pulse;
+                animation-fill-mode: forwards;
+            }
+
+            @keyframes pulse {
+                10% {
+                    background: linear-gradient(to right, $accent2 0%, rgba(255, 255, 255, 0) 10%);
+                }
+
+                20% {
+                    background: linear-gradient(to right, $accent2 10%, rgba(255, 255, 255, 0) 20%);
+                }
+
+                30% {
+                    background: linear-gradient(to right, $accent2 20%, rgba(255, 255, 255, 0) 30%);
+                }
+
+                40% {
+                    background: linear-gradient(to right, $accent2 30%, rgba(255, 255, 255, 0) 40%);
+                }
+
+                50% {
+                    background: linear-gradient(to right, $accent2 40%, rgba(255, 255, 255, 0) 50%);
+                }
+
+                60% {
+                    background: linear-gradient(to right, $accent2 50%, rgba(255, 255, 255, 0) 60%);
+                }
+
+                70% {
+                    background: linear-gradient(to right, $accent2 60%, rgba(255, 255, 255, 0) 70%);
+                }
+
+                80% {
+                    background: linear-gradient(to right, $accent2 70%, rgba(255, 255, 255, 0) 80%);
+                }
+
+                90% {
+                    background: linear-gradient(to right, $accent2 80%, rgba(255, 255, 255, 0) 90%);
+                }
+
+                100% {
+                    background: linear-gradient(to right, $accent2 101%, rgba(255, 255, 255, 0) 100%);
+                }
+
+            }
+        }
+    }
+
+    .hero2 {
+        height: 35rem;
+        max-width: 100%;
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9332866935836834) 0%, rgba(0, 0, 0, 0.6951914554884453) 35%, rgba(0, 0, 0, 0.258216665572479) 100%), url(./images/bakery-site-content.jpg);
+        background-size: cover;
+
+        .hero-text {
+            position: relative;
+            top: 15rem;
+            left: 5vw;
+
+            h2 {
+                color: $cream;
+                display: inline-block;
+                font-family: $extrabold;
+                font-size: 2rem;
+                padding-bottom: 2rem;
+                line-height: 1.2;
+            }
+
+            h1 {
+                color: $cream;
+                display: inline-block;
+                font-family: $extrabold;
+                font-size: 2rem;
+                padding-bottom: 2rem;
+                line-height: 1.2;
+            }
+
+            a {
+                font-family: $regular;
+                text-decoration: none;
+                color: $cream;
+                text-transform: uppercase;
+                font-size: 1.2rem;
+                border-width: 2px;
+                border-style: solid;
+                border-color: $accent2;
+                padding: .5rem;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+
+            a:hover {
+                animation-duration: .2s;
+                animation-name: pulse;
+                animation-fill-mode: forwards;
+            }
+
+            @keyframes pulse {
+                10% {
+                    background: linear-gradient(to right, $accent2 0%, rgba(255, 255, 255, 0) 10%);
+                }
+
+                20% {
+                    background: linear-gradient(to right, $accent2 10%, rgba(255, 255, 255, 0) 20%);
+                }
+
+                30% {
+                    background: linear-gradient(to right, $accent2 20%, rgba(255, 255, 255, 0) 30%);
+                }
+
+                40% {
+                    background: linear-gradient(to right, $accent2 30%, rgba(255, 255, 255, 0) 40%);
+                }
+
+                50% {
+                    background: linear-gradient(to right, $accent2 40%, rgba(255, 255, 255, 0) 50%);
+                }
+
+                60% {
+                    background: linear-gradient(to right, $accent2 50%, rgba(255, 255, 255, 0) 60%);
+                }
+
+                70% {
+                    background: linear-gradient(to right, $accent2 60%, rgba(255, 255, 255, 0) 70%);
+                }
+
+                80% {
+                    background: linear-gradient(to right, $accent2 70%, rgba(255, 255, 255, 0) 80%);
+                }
+
+                90% {
+                    background: linear-gradient(to right, $accent2 80%, rgba(255, 255, 255, 0) 90%);
+                }
+
+                100% {
+                    background: linear-gradient(to right, $accent2 101%, rgba(255, 255, 255, 0) 100%);
+                }
+
+            }
+        }
+    }
+}

@@ -1,0 +1,463 @@
+@include breakpoint($desktop) {
+
+    .section2 {
+
+        margin-top: 6vw;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+            "text imagegrid";
+
+        .text {
+            grid-area: text;
+            display: flex;
+            align-items: center;
+
+            h2 {
+                font-family: 'Jost Regular';
+                color: $accent2;
+                font-size: 1.8rem;
+                text-transform: uppercase;
+            }
+
+            h3 {
+                color: $secondary;
+                font-family: $bold;
+                font-size: 4.5rem;
+                line-height: 1.1;
+                max-width: 100%;
+            }
+
+            p {
+                color: $secondary;
+                font-family: $regular;
+                font-size: 1.3rem;
+                line-height: 1.3;
+                padding-top: 2rem;
+                max-width: 100%;
+            }
+
+            .headline {
+                display: inline-block;
+
+                .divider {
+
+                    img {
+                        max-width: 100vw;
+                    }
+                }
+            }
+
+            .button {
+                padding-top: 4rem;
+
+                a {
+                    font-family: $regular;
+                    text-decoration: none;
+                    color: $cream;
+                    text-transform: uppercase;
+                    font-size: 1.3rem;
+                    border-width: 0.2vh;
+                    border-style: solid;
+                    border-color: $accent2;
+                    padding: 1rem;
+                    padding-left: 4.5rem;
+                    padding-right: 4.5rem;
+                    background-color: $accent2;
+                }
+
+                a:hover {
+                    font-family: $regular;
+                    text-decoration: none;
+                    color: $cream;
+                    text-transform: uppercase;
+                    font-size: 1.3rem;
+                    border-width: 0.2vh;
+                    border-style: solid;
+                    border-color: $cream;
+                    padding: 1rem;
+                    padding-left: 4.5rem;
+                    padding-right: 4.5rem;
+                    animation-duration: .2s;
+                    animation-name: pulse2;
+                    animation-fill-mode: forwards;
+
+                }
+            }
+        }
+
+
+        @keyframes pulse2 {
+            10% {
+                background: linear-gradient(to right, $accent 0%, $accent2 10%);
+            }
+
+            20% {
+                background: linear-gradient(to right, $accent 10%, $accent2 20%);
+            }
+
+            30% {
+                background: linear-gradient(to right, $accent 20%, $accent2 30%);
+            }
+
+            40% {
+                background: linear-gradient(to right, $accent 30%, $accent2 40%);
+            }
+
+            50% {
+                background: linear-gradient(to right, $accent 40%, $accent2 50%);
+            }
+
+            60% {
+                background: linear-gradient(to right, $accent 50%, $accent2 60%);
+            }
+
+            70% {
+                background: linear-gradient(to right, $accent 60%, $accent2 70%);
+            }
+
+            80% {
+                background: linear-gradient(to right, $accent 70%, $accent2 80%);
+            }
+
+            90% {
+                background: linear-gradient(to right, $accent 80%, $accent2 90%);
+            }
+
+            100% {
+                background: linear-gradient(to right, $accent 101%, rgba(255, 255, 255, 0) 100%);
+            }
+
+        }
+
+        .image {
+            grid-area: imagegrid;
+            display: flex;
+            justify-content: flex-end;
+            background-image: url(./images/bread.svg);
+            background-position: left;
+            background-repeat: no-repeat;
+
+
+
+            img {
+                width: 45%;
+                align-self: center;
+            }
+        }
+    }
+
+
+
+
+    .section3 {
+        margin-top: 6vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 3vw;
+        grid-template-areas:
+            "service1 service2 service3";
+
+        h3 {
+            font-family: $bold;
+            color: $cream;
+            font-size: 2rem;
+            text-align: center;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        p {
+            color: $cream;
+            font-family: $regular;
+            line-height: 1.3;
+            font-size: 1.7rem;
+            padding-top: 1rem;
+            text-align: center;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+
+        .service1 {
+            grid-area: service1;
+            background-size: 10rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 30rem;
+            min-width: 10rem;
+            background-color: $secondary;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            will-change: background-color;
+            transition: background-color 1s;
+        }
+
+        .service1:hover {
+            background-color: $accent2;
+        }
+
+        .service2 {
+            grid-area: service2;
+            background-size: 10rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 30rem;
+            min-width: 10rem;
+            background-color: $secondary;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            will-change: background-color;
+            transition: background-color 1s;
+        }
+
+        .service2:hover {
+            background-color: $accent2;
+        }
+
+        .service3 {
+            grid-area: service3;
+            background-size: 10rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 30rem;
+            min-width: 10rem;
+            background-color: $secondary;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            will-change: background-color;
+            transition: background-color 1s;
+        }
+
+        .service3:hover {
+            background-color: $accent2;
+        }
+    }
+
+}
+
+@include breakpoint(0, $mobile) {
+
+    .section2 {
+
+        margin-top: 6vh;
+
+        .text {
+            grid-area: text;
+            display: flex;
+            align-items: center;
+            margin: 0 5vw;
+
+            h2 {
+                font-family: 'Jost Regular';
+                color: $accent2;
+                font-size: 1.5rem;
+                text-transform: uppercase;
+            }
+
+            h3 {
+                color: $secondary;
+                font-family: $bold;
+                font-size: 2rem;
+                line-height: 1.1;
+                max-width: 100%;
+            }
+
+            p {
+                color: $secondary;
+                font-family: $regular;
+                font-size: 1.3rem;
+                line-height: 1.3;
+                padding-top: 2rem;
+                max-width: 100%;
+            }
+
+            .headline {
+                display: inline-block;
+
+                .divider {
+
+                    img {
+                        max-width: 100vw;
+                    }
+                }
+            }
+
+            .button {
+                padding-top: 2rem;
+
+                a {
+                    font-family: $regular;
+                    text-decoration: none;
+                    color: $cream;
+                    text-transform: uppercase;
+                    font-size: 1.2rem;
+                    border-width: 0.2vh;
+                    border-style: solid;
+                    border-color: $accent2;
+                    padding: .5rem;
+                    padding-left: 2.5rem;
+                    padding-right: 2.5rem;
+                    background-color: $accent2;
+                }
+
+                a:hover {
+                    
+                    animation-duration: .2s;
+                    animation-name: pulse2;
+                    animation-fill-mode: forwards;
+
+                }
+            }
+        }
+
+
+        @keyframes pulse2 {
+            10% {
+                background: linear-gradient(to right, $accent 0%, $accent2 10%);
+            }
+
+            20% {
+                background: linear-gradient(to right, $accent 10%, $accent2 20%);
+            }
+
+            30% {
+                background: linear-gradient(to right, $accent 20%, $accent2 30%);
+            }
+
+            40% {
+                background: linear-gradient(to right, $accent 30%, $accent2 40%);
+            }
+
+            50% {
+                background: linear-gradient(to right, $accent 40%, $accent2 50%);
+            }
+
+            60% {
+                background: linear-gradient(to right, $accent 50%, $accent2 60%);
+            }
+
+            70% {
+                background: linear-gradient(to right, $accent 60%, $accent2 70%);
+            }
+
+            80% {
+                background: linear-gradient(to right, $accent 70%, $accent2 80%);
+            }
+
+            90% {
+                background: linear-gradient(to right, $accent 80%, $accent2 90%);
+            }
+
+            100% {
+                background: linear-gradient(to right, $accent 101%, rgba(255, 255, 255, 0) 100%);
+            }
+
+        }
+
+        .image {
+            display: flex;
+            justify-content: center;
+
+            img {
+                margin-top: 6vh;
+                width: 100vw;
+                align-self: center;
+            }
+        }
+    }
+
+
+
+
+    .section3 {
+        margin-top: 6vw;
+        
+
+        h3 {
+            font-family: $bold;
+            color: $cream;
+            text-transform: uppercase;
+            font-size: 2rem;
+            text-align: center;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        p {
+            color: $cream;
+            font-family: $regular;
+            line-height: 1.3;
+            font-size: 1.5rem;
+            padding-top: 1rem;
+            text-align: center;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+
+        .service1 {
+            grid-area: service1;
+            background-size: 10rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 20rem;
+            min-width: 10rem;
+            background-color: $secondary;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            will-change: background-color;
+            transition: background-color 1s;
+            margin: 4vw;
+        }
+
+        .service1:hover {
+            background-color: $accent2;
+        }
+
+        .service2 {
+            grid-area: service2;
+            background-size: 10rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 20rem;
+            min-width: 10rem;
+            background-color: $secondary;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            will-change: background-color;
+            transition: background-color 1s;
+            margin: 4vw;
+        }
+
+        .service2:hover {
+            background-color: $accent2;
+        }
+
+        .service3 {
+            grid-area: service3;
+            background-size: 10rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 20rem;
+            min-width: 10rem;
+            background-color: $secondary;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            will-change: background-color;
+            transition: background-color 1s;
+            margin: 4vw;
+        }
+
+        .service3:hover {
+            background-color: $accent2;
+        }
+    }
+
+}

@@ -1,0 +1,76 @@
+@include breakpoint($desktop) {
+
+    .locations {
+        background-color: $accent;
+        margin-top: 6vw;
+
+        .marginloc {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 12vw;
+            margin-right: 12vw;
+        }
+
+        .location1,
+        .location2,
+        .location3 {
+            padding-top: 7rem;
+            padding-bottom: 7rem;
+
+
+            h2 {
+                font-family: $bold;
+                font-size: 1.8rem;
+                color: $cream;
+                padding-bottom: 1rem;
+            }
+
+            p {
+                font-family: $regular;
+                font-size: 1.5rem;
+                color: $cream;
+                line-height: 1.2;
+            }
+        }
+
+    }
+}
+
+@include breakpoint(0, $mobile) {
+    .locations {
+        background-color: $accent;
+        margin-top: 6vh;
+        padding-bottom: 6vh;
+
+        .marginloc {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .location1,
+        .location2,
+        .location3 {
+            padding-top: 3rem;
+            width: 13rem;
+
+
+            h2 {
+                font-family: $bold;
+                font-size: 1.3rem;
+                color: $cream;
+                padding-bottom: 1rem;
+            }
+
+            p {
+                font-family: $regular;
+                font-size: 1.2rem;
+                color: $cream;
+                line-height: 1.2;
+            }
+        }
+
+    }
+}

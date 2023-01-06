@@ -1,0 +1,14 @@
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 100">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff7ec;
+        stroke-miterlimit: 10;
+        stroke-width: 12px;
+      }
+    </style>
+  </defs>
+  <title>Zeichenfläche 1</title>
+  <line class="cls-1" y1="50" x2="295.5" y2="50"/>
+</svg>
