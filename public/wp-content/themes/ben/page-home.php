@@ -46,7 +46,7 @@ Template Name: Home
             <div class="section1">
                 <div class="text">
                         <?php
-                        $post = get_post(1);
+                        $post = get_post(27);
                         if ( $post ) :
                         ?>
                     <div>
@@ -74,7 +74,7 @@ Template Name: Home
             <div class="locations">
                 <div class="marginloc">
                 <?php
-                        $post = get_post(28);
+                        $post = get_post(29);
                         if ( $post ) : ?>
                     <div class="location1">
                             <h2><?php the_title(); ?></h2>
@@ -84,7 +84,7 @@ Template Name: Home
                         endif; 
                     ?>
                     <?php
-                        $post = get_post(30);
+                        $post = get_post(31);
                         if ( $post ) : ?>
                     <div class="location2">
                             <h2><?php the_title(); ?></h2>
@@ -94,7 +94,7 @@ Template Name: Home
                         endif; 
                     ?>
                     <?php
-                        $post = get_post(34);
+                        $post = get_post(33);
                         if ( $post ) : ?>
                     <div class="location3">
                     
@@ -111,7 +111,7 @@ Template Name: Home
         <section class="workshops" id="workshops">
             <div class="section2">
             <?php
-            $post = get_post(36);
+            $post = get_post(35);
             if ( $post ) : ?>
                 <div class="text">
                     <div>
@@ -139,31 +139,41 @@ Template Name: Home
             <div class="section3">
                 <div class="service1">
                     <div class="services-text">
-                        <h3>Level 1</h3>
-                        <p>Perfekt für Anfänger!
-                            Jeden Dienstag um 17:00
-                            bei Ben Müller Downtown!
-                        </p>
+                    <?php
+                        $post = get_post(37);
+                        if ( $post ) : 
+                    ?>
+                        <h3><?php the_title(); ?></h3>
+                        <?php the_content();?>
+                    <?php
+                        endif; 
+                    ?> 
                     </div>
                 </div>
                 <div class="service2">
                     <div class="services-text">
-                        <h3>Level 2</h3>
-                        <p>Backen wie die Oma!
-                            Jeden Freitag um 12:00
-                            bei Ben Müller Metro am Bahnhof!
-
-                        </p>
+                    <?php
+                        $post = get_post(39);
+                        if ( $post ) : 
+                    ?>
+                        <h3><?php the_title(); ?></h3>
+                        <?php the_content();?>
+                    <?php
+                        endif; 
+                    ?> 
                     </div>
                 </div>
                 <div class="service3">
                     <div class="services-text">
-                        <h3>Level 3</h3>
-                        <p>Backen wie ein Gott!
-                            Jeden Montag um 20:00
-                            bei Ben Müller Downtown!
-
-                        </p>
+                    <?php
+                        $post = get_post(41);
+                        if ( $post ) : 
+                    ?>
+                        <h3><?php the_title(); ?></h3>
+                        <?php the_content();?>
+                    <?php
+                        endif; 
+                    ?> 
                     </div>
                 </div>
             </div>
@@ -174,18 +184,25 @@ Template Name: Home
             <div class="section4">
                 <div class="text">
                     <div>
+                    <?php
+                        $post = get_post(43);
+                        if ( $post ) : 
+                    ?>
                         <div class="headline">
-                            <h2>Deine Karriere.</h2>
+                        <h2><?php echo get_post_custom_values('subtitel')[2];?></h2>
                             <div class="divider">
                                 <img src="<?php echo get_template_directory_uri() ?>/images/divider2.svg" alt="Text Divider">
                             </div>
                         </div>
-                        <h3>Werde Teil von Ben Müller.</h3>
+                        <h3><?php the_title(); ?></h3>
                         <div class="button">
                             <div>
                                 <a href="#" class="button">Anmelden</a>
                             </div>
                         </div>
+                        <?php
+                        endif; 
+                    ?>
                     </div>
                 </div>
                 <div class="image">
@@ -197,18 +214,21 @@ Template Name: Home
         <div class="section5">
             <div class="text">
                 <div>
+                <?php
+                        $post = get_post(45);
+                        if ( $post ) : 
+                    ?>
                     <div class="headline">
-                        <h2>Wir sind Grün!</h2>
+                        <h2><?php echo get_post_custom_values('subtitel')[3];?></h2>
                         <div class="divider">
                             <img src="<?php echo get_template_directory_uri() ?>/images/divider.svg" alt="Text Divider">
                         </div>
                     </div>
-                    <h3>Für unsere Kinder!</h3>
-                    <p>Ben Müller setzt nicht nur in Sachen Lebensmittel neue Maßstäbe. Auch in
-                        Sachen erneuerbare Energie sind wir Vorreiter! Wir beziehen unseren Strom
-                        ausschließlich aus erneuerbaren Quellen und haben somit keine Emissionen
-                        auf unserem Buckel liegen. Für eine Zukunft, in der auch unsere Kinder noch
-                        frische Luft schnuppern dürfen.</p>
+                    <h3><?php the_title(); ?></h3>
+                    <?php the_content();?>
+                        <?php
+                        endif; 
+                    ?>
                 </div>
             </div>
             <div class="image">

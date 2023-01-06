@@ -3,7 +3,7 @@ namespace Deployer;
 
 require 'recipe/common.php';
 
-set('repository', 'https://github.com/testosteron-torsten/wpaaron_frauenschuh_nutzenberger.git');
+set('repository', 'https://github.com/testosteron-torsten/ben-wp.git');
 
 add('shared_files', []);
 add('shared_dirs', []);
@@ -15,7 +15,7 @@ set('shared_dirs', ['public/wp-content/uploads']);
 host('193.170.119.194')
  ->set('remote_user', 'admin')
  ->set('port','5412')
- ->set('deploy_path', '~/admin/aron');
+ ->set('deploy_path', '~/admin/ben');
 
 task('deploy', [
  'deploy:prepare',
