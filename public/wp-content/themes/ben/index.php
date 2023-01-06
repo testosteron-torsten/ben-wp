@@ -1,6 +1,10 @@
 <?php get_header(); ?>
 <body>
 <?php wp_body_open(); ?>
+<?php
+global $post;
+$postid = $post->ID;
+?>
     <header>
         <section class="home" id="home">
             <div id="header">
@@ -31,14 +35,9 @@
             </div>
             <div class="hero2">
                 <span class="hero-text">
-                        <?php
-                        $post = get_post(83);
-                        if ( $post ) :
-                        ?>
+
                    <h1><br><br><br><?php the_title(); ?></h1>
-                        <?php
-                        endif; 
-                        ?>
+
                 </span>
             </div>
         </section>
@@ -49,24 +48,12 @@
             <div class="section123">
                 <div>
                 <div class="text">
-                        <?php
-                        $post = get_post(85);
-                        if ( $post ) :
-                        ?>
-                    <div>
-                        <h2><?php the_title(); ?></h2>
-                        <?php the_content();?><br><br><br><br><br><br>
-                    </div>
-                        <?php
-                        endif; 
-                        ?>
-                </div>
-                <div class="image">
-                    <img src="<?php echo get_template_directory_uri() ?>/images/bäckerei.jpg" alt="Bäckerei Theke mit vielen Nachspeisen">
+                        <?php the_content();?>
                 </div>
                 </div>
             </div>
         </section>
+        <br><br><br><br><br><br><br><br>
 
         
     </main>

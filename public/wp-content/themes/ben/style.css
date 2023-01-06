@@ -636,9 +636,6 @@ body {
     z-index: 14;
   }
 
-  header #header #mainnav #hamburger .closed #ul {
-display: none;
-  }
 
   header #header #mainnav #hamburger {
     position: fixed;
